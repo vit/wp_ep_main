@@ -1,0 +1,122 @@
+/*
+Theme Name: EP_Main
+Theme URI: https://evarist.ru/
+Author: vit
+Author URI: https://evarist.ru/
+Description: EP Main Site Theme
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ep_main
+Tags: 
+*/
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    -font-family: 'Poiret One', cursive;
+
+}
+
+.container-1 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#site-navigation {
+    -box-shadow: none;
+    background-color: white;
+    -background-color: #cccccc;
+    color: black;
+
+    -height: 100px;
+    -line-height: 25px;
+    -padding: 16px 0px;
+
+    -height: 64px;
+}
+
+.brand-logo {
+    line-height: none;
+    -line-height: 68px;
+}
+
+@media(min-width:993px) {
+    #site-navigation {
+        -height: 64px;
+        height: 100px;
+        line-height: 25px;
+        padding: 16px 0px;
+    }
+    .brand-logo {
+        line-height: 68px;
+    }
+
+}
+
+
+#site-navigation .nav-wrapper a,
+#site-navigation .nav-wrapper li a {
+    color: black;
+}
+
+#top-menu {
+    margin-left: 90px;
+}
+
+#top-menu a {
+    border-bottom: solid transparent 3px;
+}
+#top-menu .current_page_item a,
+#top-menu a:hover {
+    -border-bottom: solid blue 2px;
+    border-bottom: solid #1565c0 3px; /* #1565c0 blue darken-3 */
+    background-color: inherit;
+}
+#top-menu a {
+    -padding: 2px 0px;
+    margin: 3px 10px;
+    padding: 0px 0px;
+    -margin: 0px 10px;
+}
+
+#breadcrumbs {
+    -box-shadow: none;
+    background-color: #cccccc;
+    color: white;
+    height: 32px;
+    line-height: 32px;
+    z-index: 500;
+}
+
+footer {
+    color: white;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+  
+
+/*div[class$='hh-widget-'] {*/
+
+.hh-widget-wrapper {
+    padding: 15px 0px;
+    -margin: 25px 0px;
+}
+
+.hh-widget-wrapper > div,
+.hh-widget-wrapper > div:hover {
+    -z-index: -5;
+    border: none !important;
+    -border: solid red 5px !important;
+
+    padding: 0px 0px !important;
+    -margin: 0px 0px;
+}
