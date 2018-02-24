@@ -1,0 +1,68 @@
+
+#top-navigation {
+    display: none;
+}
+
+#main-navigation {
+    -box-shadow: none;
+    -background-color: white;
+    -color: black;
+}
+
+#main-navigation .brand-logo-img {
+    line-height: none;
+    height: 80px;
+    margin: 10px 0px;
+}
+
+
+@media(min-width:993px) {
+    #main-navigation {
+        height: 100px;
+        line-height: 25px;
+    }
+    #main-navigation .brand-logo-img {
+        line-height: none;
+        height: 50px;
+        margin: 25px 0px 20px -80px;
+    }
+
+	#main-menu-container {
+	    margin: auto 0 auto 75px;
+        height: 100px;
+        line-height: 28px;
+        padding: 12px 0px;
+
+        box-sizing: border-box;
+        -border: solid thin green;
+    }
+
+}
+
+
+#main-navigation .nav-wrapper a,
+#main-navigation .nav-wrapper li a {
+    color: black;
+}
+
+#main-menu {
+    -margin-left: 90px;
+    margin: 5px 4px;
+    -height: 30px;
+    -line-height: 30px;
+}
+
+#main-menu a {
+    border-bottom: solid transparent 3px;
+}
+#main-menu .current_page_item a,
+#main-menu a:hover {
+    border-bottom: solid #1565c0 3px;
+    background-color: inherit;
+}
+#main-menu a {
+    -padding: 2px 0px;
+    margin: 2px 8px;
+    padding: 0px 0px;
+    -margin: 0px 10px;
+}

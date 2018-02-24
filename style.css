@@ -17,23 +17,12 @@ html {
 
 }
 
-.container-1 {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#site-navigation {
-    -box-shadow: none;
-    background-color: white;
-    -background-color: #cccccc;
-    color: black;
-
-    -height: 100px;
-    -line-height: 25px;
-    -padding: 16px 0px;
-
-    -height: 64px;
+/*
+#main-navigation {
+    box-shadow: none;
+    -background-color: white;
+    -color: black;
 }
 
 .brand-logo {
@@ -55,38 +44,43 @@ html {
 }
 
 
-#site-navigation .nav-wrapper a,
-#site-navigation .nav-wrapper li a {
+#main-navigation .nav-wrapper a,
+#main-navigation .nav-wrapper li a {
     color: black;
 }
 
-#top-menu {
+#main-menu {
     margin-left: 90px;
 }
 
-#top-menu a {
+#main-menu a {
     border-bottom: solid transparent 3px;
 }
-#top-menu .current_page_item a,
-#top-menu a:hover {
+#main-menu .current_page_item a,
+#main-menu a:hover {
     -border-bottom: solid blue 2px;
-    border-bottom: solid #1565c0 3px; /* #1565c0 blue darken-3 */
+    border-bottom: solid #1565c0 3px;
     background-color: inherit;
 }
-#top-menu a {
+#main-menu a {
     -padding: 2px 0px;
     margin: 3px 10px;
     padding: 0px 0px;
     -margin: 0px 10px;
 }
+*/
+
+
 
 #breadcrumbs {
-    -box-shadow: none;
+    box-shadow: none;
     background-color: #cccccc;
     color: white;
     height: 32px;
     line-height: 32px;
-    z-index: 500;
+    -z-index: 500;
+
+    display: flex;
 }
 
 footer {
@@ -97,6 +91,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
+    justify-content: center;
+    -align-items: center;
 }
 
 main {
@@ -104,7 +101,6 @@ main {
 }
   
 
-/*div[class$='hh-widget-'] {*/
 
 .hh-widget-wrapper {
     padding: 15px 0px;
@@ -113,10 +109,21 @@ main {
 
 .hh-widget-wrapper > div,
 .hh-widget-wrapper > div:hover {
-    -z-index: -5;
     border: none !important;
     -border: solid red 5px !important;
 
     padding: 0px 0px !important;
     -margin: 0px 0px;
+
+    -background-color: #ffb74d !important; /* #ffb74d orange lighten-2 */
+
+}
+
+
+
+.top-image {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    z-index: -5;
 }
