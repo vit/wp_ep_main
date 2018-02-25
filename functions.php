@@ -31,4 +31,10 @@ setcookie('my_theme', $GLOBALS['my_theme'], 0, '/');
 //setcookie('my_theme', $_GLOBALS['my_theme'], 1);
 //echo $_GLOBALS['my_theme'];
 
+
+// enable featured images
+add_theme_support( 'post-thumbnails' );
+//see https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+
+
 ?>

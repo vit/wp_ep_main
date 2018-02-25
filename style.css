@@ -84,6 +84,7 @@ html {
 }
 */
 #breadcrumbs {
+    font-size: 75%;
     box-shadow: none;
     color: #ddd;
     height: 32px;
@@ -92,6 +93,10 @@ html {
     text-transform: uppercase;
     text-shadow: 1px 1px 1px black;
     display: flex;
+
+    -background-color: #0d47a1; /* #0d47a1 blue darken-4 */
+    background-color: rgba(3, 71, 161, 0.7) !important;
+    
 }
 #breadcrumbs > div {
     -height: 32px;
@@ -109,6 +114,14 @@ html {
 }
 #breadcrumbs a:hover {
     color: white;
+    -background-color: black;
+}
+#breadcrumbs > div > span {
+    padding: 0px 10px;
+    margin: 0;
+}
+#breadcrumbs > div > span:hover {
+    background-color: black;
 }
 
 #breadcrumbs > div > span:last-child a {
@@ -159,6 +172,10 @@ main {
 .top-image {
     position: absolute;
     top: 0;
-    max-width: 100%;
+    -max-width: 100%;
+    -min-width: 100%;
+    -min-height: 30vh;
+    -min-height: 30vh;
+    height: 62vh;
     z-index: -5;
 }
