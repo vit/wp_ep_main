@@ -36,3 +36,4 @@
         </script>
     </body>
 </html>
+<?php if( $GLOBALS['REPLACE_CANONICAL_HOST'] ) ob_end_flush(); ?>

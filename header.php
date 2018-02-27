@@ -1,3 +1,10 @@
+<?php
+function host_replace_filter($buffer) {
+    return (str_replace("//{$GLOBALS['CANONICAL_HOST']}", "//{$GLOBALS['REQUESTED_HOST']}", $buffer));
+}
+if( $GLOBALS['REPLACE_CANONICAL_HOST'] )
+    ob_start("host_replace_filter");
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
     <head>
