@@ -1,17 +1,22 @@
 <?php
 function host_replace_filter($buffer) {
-    return (str_replace("//{$GLOBALS['CANONICAL_HOST']}", "//{$GLOBALS['REQUESTED_HOST']}", $buffer));
+    return isset($GLOBALS['CANONICAL_HOST']) && isset($GLOBALS['REQUESTED_HOST']) ?
+        str_replace("//{$GLOBALS['CANONICAL_HOST']}", "//{$GLOBALS['REQUESTED_HOST']}", $buffer) :
+        $buffer;
 }
-if( $GLOBALS['REPLACE_CANONICAL_HOST'] )
-    ob_start("host_replace_filter");
+if( $GLOBALS['REPLACE_CANONICAL_HOST'] ) ob_start("host_replace_filter");
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
     <head>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+        <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i&amp;subset=cyrillic" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,700,800,900&amp;subset=cyrillic" rel="stylesheet">
+
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
         <!--link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>?<?php echo time() ?>"-->
@@ -24,7 +29,8 @@ if( $GLOBALS['REPLACE_CANONICAL_HOST'] )
 
         <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-        <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
+        <!--title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title-->
+        <title><?php wp_title(); ?></title>
 
         <?php wp_head(); ?>
 

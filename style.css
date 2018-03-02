@@ -14,9 +14,7 @@ Tags:
 html {
     font-family: 'Open Sans', sans-serif;
     -font-family: 'Poiret One', cursive;
-
 }
-
 
 /*
 #main-navigation {
@@ -96,7 +94,7 @@ html {
 
     -background-color: #0d47a1; /* #0d47a1 blue darken-4 */
     background-color: rgba(3, 71, 161, 0.7) !important;
-    
+
 }
 #breadcrumbs > div {
     -height: 32px;
@@ -114,14 +112,16 @@ html {
 }
 #breadcrumbs a:hover {
     color: white;
+    text-decoration: underline;
     -background-color: black;
 }
 #breadcrumbs > div > span {
-    padding: 0px 10px;
+    -padding: 0px 10px;
+    padding: 0px 0px;
     margin: 0;
 }
 #breadcrumbs > div > span:hover {
-    background-color: black;
+    -background-color: black;
 }
 
 #breadcrumbs > div > span:last-child a {
@@ -142,7 +142,11 @@ body {
 
     justify-content: center;
     -align-items: center;
+    
+    position: relative;
 }
+
+
 
 main {
     flex: 1 0 auto;
@@ -169,13 +173,94 @@ main {
 
 
 
-.top-image {
-    position: absolute;
-    top: 0;
-    -max-width: 100%;
-    -min-width: 100%;
-    -min-height: 30vh;
-    -min-height: 30vh;
-    height: 62vh;
-    z-index: -5;
+
+/* Shortcodes */
+
+.page_section {
+    -padding: 30px 0px;
+    padding: 20px 0px;
+}
+.page_section .collapsible * {
+    background-color: transparent;
+}
+.-page_section .collapsible a {}
+.page_section a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.page_section * {
+    background-color: transparent;
+}
+
+.t-top-block-content h1 {}
+.top-block h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 42px;
+    margin: 20px 0 20px 0;
+}
+
+.page_section h3 {
+    font-family: 'Montserrat', sans-serif;
+    -text-transform: uppercase;
+    font-weight: 100;
+    -font-size: 36px;
+    font-size: 32px;
+    margin: 16px 0 16px 0;
+}
+
+.page_section h4 {
+    font-family: 'Montserrat', sans-serif;
+    -text-transform: uppercase;
+    font-weight: 100;
+    -font-size: 28px;
+    font-size: 24px;
+    margin: 12px 0 4px 0;
+}
+
+
+.page_section.scheme-1 {
+    background-color: rgb(3,71,161);
+    -color: #eee;
+    color: #fff;
+}
+.page_section.scheme-2 {
+    background-color: rgb(71,3,161);
+    -color: #eee;
+    color: #fff;
+}
+.page_section.scheme-3 {
+    background-color: rgb(161,3,71);
+    color: #fff;
+}
+.page_section.scheme-4 {
+    background-color: rgb(3,71,161);
+    color: #fff;
+}
+
+
+.card .card-title {
+    color: white !important;
+    text-shadow: 1px 1px 2px black !important;
+}
+
+
+ul.dash {
+  list-style-type: none;
+}
+ul.dash li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+}
+ul.dash li {
+  margin-left: 20px;
+}
+
+.collapsible .collapsible-header {
+}
+.collapsible .collapsible-header:after {
+    content: '\25be';
 }

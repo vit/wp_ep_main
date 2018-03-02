@@ -10,6 +10,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 		'main-a'    => __( 'Main Menu a', 'ep-main' ),
 		'main-b'    => __( 'Main Menu a', 'ep-main' ),
 		'social' => __( 'Social Links Menu', 'ep-main' ),
+		'page-custom-menu'    => __( 'Page Custom Menu', 'ep-main' ),
 	) );
 
 
@@ -22,10 +23,11 @@ remove_filter( 'the_excerpt', 'wpautop' );
 // Register wp-materialize-navwalker
 //require_once get_template_directory() . '/wp_materialize_navwalker.php';
 
+$default_theme = 'a';
 
 //$theme_param = $_REQUEST['set_theme'] ? $_REQUEST['set_theme'] : ($_COOKIE['my_theme'] ? $_COOKIE['my_theme'] : 'a');
 $theme_param = $_REQUEST['set_theme'] ? $_REQUEST['set_theme'] : $_COOKIE['my_theme'];
-$GLOBALS['my_theme'] = in_array($theme_param, ['a','b']) ? $theme_param : 'a';
+$GLOBALS['my_theme'] = in_array($theme_param, ['a','b']) ? $theme_param : $default_theme;
 
 setcookie('my_theme', $GLOBALS['my_theme'], 0, '/');
 //setcookie('my_theme', $_GLOBALS['my_theme'], 1);

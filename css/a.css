@@ -1,18 +1,69 @@
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #cae8ca;
-  border: 2px solid #4CAF50;
+
+
+#top-navigation {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
 }
+#main-navigation {
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    z-index: 5;
+}
+
+.top-block {
+    height: 38vh;
+    -z-index: -5;
+    -margin-top: 82px;
+    -display: flex;
+    -align-content: flex-end;
+}
+.top-block-content {
+    -height: 38vh;
+    -z-index: -5;
+    margin-top: 82px;
+    -display: flex;
+    -align-content: flex-end;
+}
+
+.t-top-block-content h1 {
+    -font-size: 28px;
+    -font-size: 36px;
+    -font-size: 48px;
+    font-size: 42px;
+    text-transform: uppercase;
+    -font-family: 'Poiret One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    -font-weight: 700;
+    -font-weight: 900;
+}
+
+.top-image {
+    -position: absolute;
+    -top: 0;
+    -max-width: 100%;
+    -min-width: 100%;
+    -min-height: 30vh;
+    -height: 62vh;
+    -z-index: -5;
+
+    -object-position: 0 0;
+    -object-fit: cover;
+    -object-fit: fill;
+}
+
+
+
 
 #top-navigation {
     -border: thin solid red;
     box-shadow: none;
     height: 32px !important;
-    -background-color: rgba(10, 40, 80, 0.7) !important;
-    background-color: rgba(10, 40, 80, 0.5) !important;
+    background-color: rgba(10, 40, 80, 0.7) !important;
+    -background-color: rgba(10, 40, 80, 0.5) !important;
     text-shadow: 1px 1px 1px black;
 
 
@@ -84,8 +135,8 @@
 	/* Main Navigation */
 
 #main-navigation {
-    -background-color: rgba(30, 80, 120, 0.7) !important;
-    background-color: rgba(30, 80, 120, 0.5) !important;
+    background-color: rgba(30, 80, 120, 0.7) !important;
+    -background-color: rgba(30, 80, 120, 0.5) !important;
     text-shadow: 1px 1px 1px black;
     box-shadow: none;
     height: 50px;
@@ -228,8 +279,8 @@
 
         -background-color: white;
         -background-color: #eee;
-        -background-color: rgba(30, 80, 120, 0.7) !important;
-        background-color: rgba(30, 80, 120, 0.5) !important;
+        background-color: rgba(30, 80, 120, 0.7) !important;
+        -background-color: rgba(30, 80, 120, 0.5) !important;
         -box-shadow: 1px 1px 10px black;
         -border-bottom: solid black thin;
 	}
@@ -257,50 +308,4 @@
 	}
 
 
-/*
 
-
-
-
-    #main-menu-container a {
-        color: black;
-        text-decoration: none;
-        -display: block;
-        white-space: nowrap;
-        -padding: 10px 15px;
-    }
-  
-    #mmain-menu-container li.current-menu-ancestor > a,
-    #mmain-menu-container li.current-menu-item > a {
-        -background-color: #0d47a1;
-        background-color: #eee;
-    }
-    #main-menu-container li.current-menu-ancestor,
-    #main-menu-container li.current-menu-item {
-        -background-color: #0d47a1;
-        background-color: #eee;
-    }
-
-	#mmain-menu-container li:hover > a {
-        background-color: transparent;
-	}
-
-	#main-menu-container > div > ul > .menu-item-has-children > a:after {
-	    content: ' \25be';
-	}
-
-
-
-
-
-    #main-menu-container li li {
-        -display: block;
-    }
-
-    #main-menu-container li li:hover > ul {
-        -left: 100%;
-        -top: 0;
-    }
-
-
-*/
