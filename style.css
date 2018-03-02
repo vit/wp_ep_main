@@ -260,7 +260,11 @@ ul.dash li {
 }
 
 .collapsible .collapsible-header {
+    position: relative;
 }
 .collapsible .collapsible-header:after {
     content: '\25be';
+    position: absolute;
+    right: 10px;
+    top: 12px;
 }
